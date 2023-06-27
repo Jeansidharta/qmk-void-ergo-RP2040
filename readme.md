@@ -1,27 +1,28 @@
 # jeansidharta
 
-![jeansidharta](imgur.com image replace me!)
+![jeansidharta](https://i.imgur.com/WVHc4Mb.jpeg)
 
-*A short description of the keyboard/project*
+This is my modifier version of the [Void Ergo](https://github.com/victorlucachi/void_ergo)'s firmware to use a Raspberry Pi Pico (RP2040 microcontroller) instead of the Pro Micro that was originaly used in the project
 
-* Keyboard Maintainer: [Jean Sidharta](https://github.com/Jean Sidharta)
-* Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Keyboard Maintainer: [Jean Sidharta](https://github.com/JeanSidharta) (jeansidharta@gmail.com)
+* Hardware Supported: RP2040 microcontroller, commonly found in the [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/)
 
-Make example for this keyboard (after setting up your build environment):
+## How to use this firmware
 
-    make jeansidharta:default
+To start using this firmware, you must first setup QMK in your computer. You can follow the steps [here](https://docs.qmk.fm/#/newbs). After setting QMK up, you must the:
 
-Flashing example for this keyboard:
+1. Create a new keyboard directory: run `mkdir keyboards/void_ergo_rp2040` inside your QMK directory
+2. Enter the keyboard directory: `cd keyboards/void_ergo_rp2040`
+3. Clone this project: `git clone https://github.com/Jeansidharta/qmk-void-ergo-RP2040.git .`.
 
-    make jeansidharta:default:flash
+And voilá! You can start building this project with `qmk compile -kb void-ergo-rp2040 -km default`
 
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
+# Flashig your keyboard
 
-## Bootloader
+1. First, it must enter bootloader mode
+    - If you've never flashed it before, you can enter bootloader mode by holding the RESET button on the microcontroller while you power it on. ![Reset button location](https://i.imgur.com/CkVeKQr.png)
+    - If you've flashed it before with this firmware, there is a combination of keys that'll put the microcontroller in bootloader mode. ![Buttons combination](https://i.imgur.com/N1OBQxW.png) 
+2. Make sure you're in the keyboard directory. This'd be `<QMK_DIRECTORY>/keyboards/void-ergo-rp2040`
+3. Run `make flash`. Note that this require super user permissions (runs sudo)
 
-Enter the bootloader in 3 ways:
-
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
+Your keyboard should automatically start working after that.
