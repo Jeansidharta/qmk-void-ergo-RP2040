@@ -34,35 +34,29 @@ const uint16_t encoder_map[][NUM_ENCODERS][2] = {
 };
 #endif
 
-
-// SHIFT
-// CTRL
-// ALT
-// META
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	[LAYER_0] = LAYOUT(
-		KC_ESC,  KC_Q,       KC_W,     KC_E,    KC_R,        KC_T,    /*|*/ KC_Y,         KC_U,         KC_I,     KC_O,      KC_P,         KC_BSLS,
-		KC_TAB,  KC_A,       KC_S,     KC_D,    KC_F,        KC_G,    /*|*/ KC_H,         KC_J,         KC_K,     KC_L,      KC_SEMICOLON, KC_QUOTE,
-		XXXXXXX, KC_Z,       KC_X,     KC_C,    KC_V,        KC_B,    /*|*/ KC_N,         KC_M,         KC_COMMA, KC_DOT,    KC_SLASH,     KC_GRV,
-		         KC_MS_BTN1, KC_LCTL,  KC_LSFT, MO(LAYER_1), KC_LALT, /*|*/ KC_LGUI,      MO(LAYER_2),  KC_SPC,   KC_BSPC,   KC_MS_BTN2
+		KC_ESC,   KC_Q,       KC_W,     KC_E,    KC_R,        KC_T,    /*|*/ KC_Y,         KC_U,         KC_I,     KC_O,      KC_P,         KC_BSLS,
+		KC_TAB,   KC_A,       KC_S,     KC_D,    KC_F,        KC_G,    /*|*/ KC_H,         KC_J,         KC_K,     KC_L,      KC_SEMICOLON, KC_QUOTE,
+		KC_PAUSE, KC_Z,       KC_X,     KC_C,    KC_V,        KC_B,    /*|*/ KC_N,         KC_M,         KC_COMMA, KC_DOT,    KC_SLASH,     KC_GRV,
+		          KC_MS_BTN1, KC_LCTL,  KC_LSFT, MO(LAYER_1), KC_LALT, /*|*/ KC_LGUI,      MO(LAYER_2),  KC_SPC,   KC_BSPC,   KC_MS_BTN2
 	),
 	[LAYER_1] = LAYOUT(
-		XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, /*|*/ KC_EQL,  KC_7,        KC_8,   KC_9,   KC_0,    XXXXXXX,
-		XXXXXXX, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, XXXXXXX, /*|*/ KC_MINS, KC_4,        KC_5,   KC_6,   KC_LBRC, XXXXXXX,
-		XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, /*|*/ XXXXXXX, KC_1,        KC_2,   KC_3,   KC_RBRC, XXXXXXX,
+		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, /*|*/ KC_EQL,  KC_7,        KC_8,   KC_9,   KC_0,    XXXXXXX,
+		_______, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, XXXXXXX, /*|*/ KC_MINS, KC_4,        KC_5,   KC_6,   KC_LBRC, XXXXXXX,
+		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, /*|*/ XXXXXXX, KC_1,        KC_2,   KC_3,   KC_RBRC, XXXXXXX,
 		         XXXXXXX, _______, _______, _______,  _______, /*|*/ _______, MO(LAYER_3), KC_ENT, KC_DEL, KC_MS_BTN3
 	),
 	[LAYER_2] = LAYOUT(
-		XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, /*|*/ XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F10, DF(LAYER_GAME_0),
-		XXXXXXX, KC_HOME, KC_PGDN, KC_PGUP, KC_END,      XXXXXXX, /*|*/ XXXXXXX, KC_F4,   KC_F5,   KC_F6,   KC_F11, XXXXXXX,
-		XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, /*|*/ XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F12, XXXXXXX,
+		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, /*|*/ XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F10, DF(LAYER_GAME_0),
+		_______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,      XXXXXXX, /*|*/ XXXXXXX, KC_F4,   KC_F5,   KC_F6,   KC_F11, XXXXXXX,
+		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, /*|*/ XXXXXXX, KC_F1,   KC_F2,   KC_F3,   KC_F12, XXXXXXX,
 		         KC_MUTE, _______, _______, MO(LAYER_3), _______, /*|*/ _______, _______, _______, _______, KC_MPLY
 	),
 	[LAYER_3] = LAYOUT(
-		XXXXXXX, KC_ACL1, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, /*|*/ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DF(LAYER_GAME_0),
-		XXXXXXX, KC_ACL1, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /*|*/ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-		XXXXXXX, KC_ACL2, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /*|*/ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+		_______, XXXXXXX, XXXXXXX, KC_MPLY, XXXXXXX, QK_BOOT, /*|*/ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, DF(LAYER_GAME_0),
+		_______, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, XXXXXXX, /*|*/ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, /*|*/ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
 	             XXXXXXX, XXXXXXX, XXXXXXX, _______, XXXXXXX, /*|*/ XXXXXXX, _______, XXXXXXX, XXXXXXX, XXXXXXX
 	),
 	[LAYER_GAME_0] = LAYOUT(
