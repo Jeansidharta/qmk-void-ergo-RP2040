@@ -1,6 +1,6 @@
 {
   "manufacturer": "Jean Sidharta",
-  "keyboard_name": "jeansidharta",
+  "keyboard_name": "void_ergo_rp2040",
   "maintainer": "Jean Sidharta",
   "bootloader": "rp2040",
   "diode_direction": "COL2ROW",
