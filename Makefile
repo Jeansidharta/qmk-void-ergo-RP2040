@@ -8,11 +8,11 @@ flash:
 	# Unlocks sudo
 	sudo true
 	echo "Quickly, set your keyboard to bootloader mode!"
+	qmk compile -kb $(KEYBOARD) -km $(KEYMAP)
 	while test ! -b $(RPI_DISK_ID) ; do \
 		echo "Keyboard still not in bootloader mode..."; \
 		sleep 1; \
 	done
-	qmk compile -kb $(KEYBOARD) -km $(KEYMAP)
 	sudo mount $(RPI_DISK_ID) $(mount_point) --mkdir
 	sudo mv ~/qmk_firmware/.build/$(KEYBOARD)_$(KEYMAP).uf2 $(mount_point)
 	sudo umount $(mount_point)
