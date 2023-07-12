@@ -1,4 +1,4 @@
-RPI_DISK_ID=/dev/disk/by-id/usb-RPI_RP2_E0C9125B0D9B-0:0-part1
+RPI_DISK_ID=/dev/disk/by-label/RPI-PICO
 KEYBOARD=void_ergo_rp2040
 KEYMAP=default
 
