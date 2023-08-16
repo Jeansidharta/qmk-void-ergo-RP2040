@@ -49,3 +49,5 @@
 
 #define MK_W_OFFSET_2 1
 #define MK_W_INTERVAL_2 120
+
+#define FORCE_NKRO
