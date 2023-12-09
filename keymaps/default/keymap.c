@@ -42,10 +42,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		          KC_MS_BTN1, KC_LCTL,  KC_LSFT, MO(LAYER_1), KC_LALT, /*|*/ KC_LGUI,      MO(LAYER_2),  KC_SPC,   KC_BSPC,   KC_MS_BTN2
 	),
 	[LAYER_1] = LAYOUT(
-		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, /*|*/ KC_EQL,  KC_7,        KC_8,   KC_9,   KC_0,    XXXXXXX,
-		_______, KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT, XXXXXXX, /*|*/ KC_MINS, KC_4,        KC_5,   KC_6,   KC_LBRC, XXXXXXX,
-		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,  XXXXXXX, /*|*/ XXXXXXX, KC_1,        KC_2,   KC_3,   KC_RBRC, XXXXXXX,
-		         XXXXXXX, _______, _______, _______,  _______, /*|*/ _______, MO(LAYER_3), KC_ENT, KC_DEL, KC_MS_BTN3
+		_______, XXXXXXX, XXXXXXX, XXXXXXX       , XXXXXXX,  XXXXXXX, /*|*/ KC_EQL,  KC_7,        KC_8,   KC_9,   KC_0,    XXXXXXX,
+		_______, KC_LEFT, KC_DOWN, KC_UP         ,   KC_RIGHT, XXXXXXX, /*|*/ KC_MINS, KC_4,        KC_5,   KC_6,   KC_LBRC, XXXXXXX,
+		_______, XXXXXXX, XXXXXXX, RALT(KC_COMMA), XXXXXXX,  XXXXXXX, /*|*/ XXXXXXX, KC_1,        KC_2,   KC_3,   KC_RBRC, XXXXXXX,
+		         XXXXXXX, _______, _______       , _______,  _______, /*|*/ _______, MO(LAYER_3), KC_ENT, KC_DEL, KC_MS_BTN3
 	),
 	[LAYER_2] = LAYOUT(
 		_______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,     XXXXXXX, /*|*/ XXXXXXX, KC_F7,   KC_F8,   KC_F9,   KC_F10, DF(LAYER_GAME_0),
